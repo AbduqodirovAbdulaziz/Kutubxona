@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <input name="ism" type="text" placeholder="Talaba ismini yozing">
+        <button>Qidirish</button>
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <h1>Hamma talabalar ro'yhati </h1>
+    <br>
+    <br>
+    <br>
+    <br>
+        {% for student in talaba %}
+            <h1>{{student.id}},{{ student.ism }},{{student.kurs}},{{student.kitob_soni}} <a href="/talaba_ochir/{{talaba.id}}/"><button>o'chirish</button></a></h1>
+
+        {% endfor %}
+
+
+<!--        {% for student in talaba %}-->
+<!--            <h1>{{ student.ism }},{{student.kurs}},{{student.kitob_soni}}</h1>-->
+<!--        {% endfor %}-->
+
+<!--        {% for student in talaba %}-->
+<!--            <h1>{{ student.ism }},{{student.kurs}},{{student.kitob_soni}}</h1>-->
+<!--        {% endfor %}-->
+
+<!--        {% for student in talaba %}-->
+<!--            <h1>{{ student.ism }},{{student.kurs}}</h1>-->
+<!--        {% endfor %}-->
+</body>
+</html>

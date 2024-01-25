@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kitoblar</title>
+
+</head>
+<body>
+
+<!--    <form>-->
+<!--        <input name="nom" type="text" placeholder="Kitob nomini yozing">-->
+<!--        <button>Qidirish</button>-->
+<!--    </form>-->
+
+    <h1>Hamma kitoblar ro'yhati</h1>
+    <br>
+    <br>
+    <br>
+
+    {% for book in Kitob %}
+        <hr>{{ book.nom }},{{ book.janr }}</hr>
+    {% endfor %}
+
+
+<!--    {% for book in books %}-->
+<!--        <hr>{{ book.nom }},{{book.muallif.ism}}<a href="/kitob_ochir/{{book.id}}/"><button>o'chirish</button></a></hr>-->
+<!--    {% endfor %}-->
+<!--    <hr></hr>-->
+
+
+
+</body>
+</html>

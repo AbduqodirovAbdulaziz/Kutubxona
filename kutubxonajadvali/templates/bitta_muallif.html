@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Tanlangan Muallif ma'lumotlari</h1>
+    <br>
+    <br>
+    {% for muallif in Muallif %}
+    <h1>Ismi: {{ muallif.ism }},Jinsi-{{muallif.jins}},Kitoblar soni: {{muallif.kitoblar_soni}},Tug'ilgan sana: {{muallif.tugilgan_sana}}</h1>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br>
+<!--    <h1>Ismi: {{ muallif.ism }}</h1>-->
+<!--    <h1>Jinsi: {{muallif.jins}}</h1>-->
+<!--    <h1>Kitoblar soni: {{muallif.kitoblar_soni}}</h1>-->
+</body>
+</html>
