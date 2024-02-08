@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form method="post" action="/muallif/{{muallif.id}}/tahrirlash/">{% csrf_token %}
+    <label>Ism:</label> <br>
+    <input type="text" name="ism" value="{{ muallif.ism }}"> <br> <br>
+
+    <label>Jins(erkak,ayol):</label> <br>
+    <input type="text" name="jins" value="{{ muallif.jins }}"> <br> <br>
+
+    <label>Tug'ilgan sana:</label> <br>
+    <input type="date" name="tugilgan_sana" value="{{muallif.tugilgan_sana}}"> <br>
+
+    <label>Kitoblar soni:</label> <br>
+    <input type="number" name="kitoblar_soni" value="{{muallif.kitoblar_soni}}"> <br>
+
+    <label>Tirik:</label> <br>
+    <input type="checkbox" name="tirik" value="{{muallif.tirik}}">
+
+    <button type="submit">Tahrirlash</button>
+</form>
+
+</body>
+</html>

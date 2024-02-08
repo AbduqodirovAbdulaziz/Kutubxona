@@ -5,9 +5,40 @@
     <title>Title</title>
 </head>
 <body>
+<br>
+<br>
+<br>
         {% for muallif in Muallif %}
-            <h1>Ismi: {{ muallif.ism }},Jinsi-{{muallif.jins}},Kitoblar soni: {{muallif.kitoblar_soni}},Tug'ilgan sana: {{muallif.tugilgan_sana}}</h1>
+            <h1>Ismi: {{ muallif.ism }},Jinsi-{{muallif.jins}},Kitoblar soni: {{muallif.kitoblar_soni}},Tug'ilgan sana: {{muallif.tugilgan_sana}}<br><a href="/muallif/{{muallif.id}}/tahrirlash/">Tahrirlash</a></h1>
         {% endfor %}
+
+
+<br>
+<br>
+        <form method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Qo'shish</button>
+        </form>
+<br>
+<!--     <form method="post">{% csrf_token %}-->
+<!--         <label>Muallif ismi</label>-->
+<!--         <select name="ismi">-->
+<!--            {% for muallif in Muallif %}-->
+<!--                <option value="{{ muallif.id }}">{{muallif.ism}}</option>-->
+<!--            {% endfor %}-->
+<!--         </select>-->
+<!--        <input type="text" name="jins" placeholder="Jinsi">-->
+<!--         <label>Jinsi:</label>-->
+<!--         <select>-->
+<!--             <option value="erkak">Erkak</option>-->
+<!--             <option value="ayol">Ayol</option>-->
+<!--         </select>-->
+<!--        <input type="date" name="t_sana" placeholder="Tug'ilgan sana">-->
+<!--        <input type="number" name="k_soni" placeholder="Kitoblar soni" min="1" max="1000">-->
+<!--         <label>Tirikmi:</label>-->
+<!--        <input type="checkbox" name="tirik">-->
+<!--        <button>Qo'shish</button>-->
+<!--    </form>-->
 
 
 </body>

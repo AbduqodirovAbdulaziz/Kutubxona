@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br>
+<br>
+        {% for kutubxonachi in kutubxonachilar %}
+            <h1>Ism:{{kutubxonachi.ism}} Ish vaqti: {{kutubxonachi.ish_vaqti}}<br>  <button type="submit"><a href="/kutubxonachi/{{kutubxonachi.id}}/tahrirlash/">Tahrirlash</a></button>  </h1>
+        {% endfor %}
+<br>
+<br>
+<h1>Kutubxonachi qo'shish</h1>
+<br>
+<br>
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Qo'shish</button>
+    </form>
+
+</body>
+</html>

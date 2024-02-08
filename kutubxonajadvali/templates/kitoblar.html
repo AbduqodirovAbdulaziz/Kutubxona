@@ -17,9 +17,31 @@
     <br>
     <br>
 
-    {% for book in Kitob %}
-        <hr>{{ book.nom }},{{ book.janr }}</hr>
+    {% for book in books %}
+    <h2>{{ book.nom }},{{ book.janr }}</h2>
     {% endfor %}
+    <br>
+    <br>
+    <br>
+    <br>
+     <form method="post">{% csrf_token %}
+        <input type="text" name="nom" placeholder="Nomi: ">
+         <select name="janr">
+             <option>"Badiy"</option>
+             <option>"Ilmiy"</option>
+             <option>"Sarguzasht"</option>
+             <option>"Dramma"</option>
+         </select>
+        <input type="number" name="sahifa" placeholder="Sahifa soni: " min="10">
+         <select name="m">
+             {% for muallif in mualliflar%}
+             <option value="{{ muallif.id}}">{{muallif.ism}}</option>
+             {% endfor %}
+         </select>
+
+
+        <button>Qo'shish</button>
+    </form>
 
 
 <!--    {% for book in books %}-->

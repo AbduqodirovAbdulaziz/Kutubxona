@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <form method="post" action="/talaba/{{ talaba.id }}/tahrirlash/">{% csrf_token %}
+            <label>Ism:</label> <br>
+            <input type="text" name="ism" value="{{ talaba.ism }}"> <br> <br>
+
+            <label>kurs:</label> <br>
+            <input type="text" name="kurs" value="{{ talaba.kurs }}"> <br> <br>
+
+            <label>Kitoblar soni:</label> <br>
+            <input type="number" name="kitob_soni" value="{{talaba.kitob_soni}}">
+
+            <button type="submit">Tahrirlash</button>
+        </form>
+
+</body>
+</html>

@@ -5,15 +5,70 @@
     <title>Title</title>
 </head>
 <body>
+<br>
+<br>
+<br>
+{% for record in recordlar %}
+<h1>{{ record.talaba }}___{{ record.kitob }}___{{ record.kutubxonachi }}___{{ record.olingan_sana }}___{{ record.qaytardi }}___{{ record.qaytarish_sana }}</h1>
+{% endfor %}
 
+
+<br>
+<br>
+        <form method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Qo'shish</button>
+        </form>
+
+<br>
+<br>
+<!--<h1>Bitiruvchilarni Recordlari</h1>-->
 <!--    <h1>Talaba: {{Record.talaba}}</h1>-->
 <!--    <h1>Kitob: {{Record.kitob}}</h1>-->
 <!--    <h1>Kutubxonachi: {{Record.kutubxonachi}}</h1>-->
-    <br>
-    <br>
-    {% for record in Record %}
-        <h1>{{ record.talaba }},Kitob-{{record.kitob}},Kutubxonachi: {{record.kutubxonachi}}</h1>
-    {% endfor %}
+<br>
+<br>
+<!--{% for record in recordlar %}-->
+<!--<h1>Talaba: {{ record.talaba }}</h1><br>-->
+<!--<h1>Kitob-{{record.kitob}}</h1><br>-->
+<!--<h1>Kutubxonachi: {{record.kutubxonachi}}</h1><br>-->
+<!--<h1>Olingan sanasi:{{record.olingan_sana}}</h1><br>-->
+<!--<h1>Qaytarish sanasi:{{record.qaytarish_sana}}</h1><br>-->
+<!--<h1>Qaytardi:{{record.qaytardi}}</h1><br>-->
+<!--<button><a href="/recordlar/{{ record.id }}/tahrirlash/">tahrirlash</a></button>-->
+<!--<hr>-->
+<!--{% endfor %}-->
+<br>
+<br>
+<br>
+<!--    <form method="post">{% csrf_token %}-->
+<!--        <label>Talaba: </label>-->
+<!--        <select name="talaba">-->
+<!--            {% for talaba in talabalar %}-->
+<!--            <option value="{{ talaba.id }}">{{talaba.ism}}</option>-->
+<!--        {% endfor %}-->
+<!--        </select>-->
+
+<!--        <label>Kitob: </label>-->
+<!--        <select name="kitob">-->
+<!--            {% for kitob in kitoblar %}-->
+<!--            <option value="{{ kitob.id }}">{{kitob.nom}}</option>-->
+<!--            {% endfor %}-->
+<!--        </select>-->
+
+<!--        <label>Kutubxonachi</label>-->
+<!--        <select name="k_xonachi">-->
+<!--            {% for k_xonachi in kutubxonachi %}-->
+<!--            <option value="{{ k_xonachi.id }}">{{k_xonachi.ism}}</option>-->
+<!--            {% endfor %}-->
+<!--        </select>-->
+<!--        <input type="date" name="o_sana" placeholder="Olingan sana">-->
+<!--        <label>Qaytardi</label>-->
+<!--        <input type="checkbox" name="q">-->
+<!--        <input type="date" name="q_sana" placeholder="Qaytarish sanasi">-->
+
+<!--        <button>Qo'shish</button>-->
+<!--    </form>-->
 
 </body>
 </html>
